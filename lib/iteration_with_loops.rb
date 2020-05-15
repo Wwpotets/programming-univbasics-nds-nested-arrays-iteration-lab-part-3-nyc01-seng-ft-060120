@@ -1,4 +1,17 @@
 def join_nested_strings(src)
-  # src will be an Array of Arrays of Strings and Integers
-  # Combine all Strings present in the AoA into a single value and return it
+  y_counter = 0
+	target_data = []
+
+	while y_counter < src.length do
+		x_counter = 0
+
+		while x_counter < src[y_counter].length do
+			if src[y_counter][x_counter].class == String
+				target_data.push(src[y_counter][x_counter])
+			end
+			x_counter += 1
+		end
+		y_counter += 1
+	end
+	p target_data.join(' ')
 end
